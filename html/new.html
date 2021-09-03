@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/new.css">
+  <title>New</title>
+</head>
+<body>
+  <header class="p-3 bg-dark text-white" id="header">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 me-3 text-white text-decoration-none" id="home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+          </svg>
+        </a>
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 me-3 text-white text-decoration-none" id="user">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+          </svg>
+        </a>
+
+        <form class="col-12 col-lg-10 mb-3 mb-lg-0 me-lg-3" id="search">
+          <input type="search" class="form-control form-control-dark" placeholder="ISBNで検索..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2" id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="container mt-5" id="tier2">
+    <div class="row">
+      <div class="col-3 bg-white"></div>
+      <div class="col-6 bg-warning">
+        <input class="form-control form-control-lg"id="book-title" type="text" placeholder="タイトル..." aria-label="">
+      </div>
+      <div class="col-3 bg-white"></div>
+    </div>
+  </section>
+
+  <section class="container" id="tier1">
+    <div class="row">
+      <div class="col-2">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-link active" id="nav-tags-tab" data-bs-toggle="tab" href="#" role="tab" aria-controls="nav-tags" aria-selected="true">フィルター</a>
+          </div>
+        </nav>          
+
+        <div class="form-check-group">
+          <div class="form-check p-0 mb-2 mt-2">
+            <input class="" type="checkbox" value="" id="tag1">
+            <label class="" for="tag1">
+              イベントのみ
+            </label>
+          </div>
+          <div class="form-check p-0 mb-2">
+            <input class="" type="checkbox" value="" id="tag2">
+            <label class="" for="tag2">
+              質問のみ
+            </label>
+          </div>
+          <div class="form-check p-0 mb-2">
+            <input class="" type="checkbox" value="" id="tag3">
+            <label class="" for="tag3">
+              自分の投稿のみ
+            </label>
+          </div>  
+        </div>
+      </div>
+
+      <div class="col-5 bg-danger">
+        <div class="m-4">
+          <input class="form-control form-control"id="book-isbn" type="text" placeholder="ISBN..." aria-label="">          
+          <input class="form-control form-control"id="book-author" type="text" placeholder="作者..." aria-label="">          
+          <input class="form-control form-control"id="book-publihser" type="text" placeholder="出版社..." aria-label="">          
+          <input class="form-control form-control"id="book-year" type="text" placeholder="出版年..." aria-label="">          
+          <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end" id="cancel-create">
+            <button type="button" class="btn btn-outline-dark" id="book-cancel">Cancel</button>
+            <button type="button" class="btn btn-outline-secondary" id="book-create">Create</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3 bg-warning ">
+        <div  class="my-4 d-flex">
+          <img src="../img/noimage.png" id="book-image" alt="" srcset=""">
+        </div>
+        <div class="input-group" id="img-upload-field">
+          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <button class="btn btn-outline-secondary" type="button" id="book-img-save">Save</button>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="p-3 justify-content-center align-items-center" id="btn_group">
+          <button type="button" class="btn btn-primary btn-block mb-3 p-0" id="e_btn">イベントと作成</button>
+          <button type="button" class="btn btn-primary btn-block mb-3 p-0" id="q_btn">質問を作成</button>
+
+          <form id="s_selector" class="">
+            <!-- <div class="form-row align-items-center"> -->
+              <!-- <div class="col-auto"> -->
+                <div class="cp_ipselect cp_sl04 d-inline-block">
+                  <select required>
+                    <option value="" hidden>読書状態</option>
+                    <option value="1">読書中</option>
+                    <option value="2">積読中</option>
+                    <option value="3">読了</option>
+                    <option value="4">なし</option>
+                  </select>
+                </div>
+              <!-- </div>  -->
+              <!-- <div class="col-auto"> -->
+                <button type="submit" class="btn btn-primary d-inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"></path>
+                  </svg>
+                </button> 
+                <!-- </div> -->
+          </form>
+          <p class="m-0 text-muted" id="s_phrase">※ステータスを保存すると該当の書籍が本棚に追加されます。</p>     
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-5" id="tier3">
+    <div class="row">
+      <div class="col-8 bg-warning">
+
+      </div>
+      <div class="col-4 bg-dark">AAA</div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
